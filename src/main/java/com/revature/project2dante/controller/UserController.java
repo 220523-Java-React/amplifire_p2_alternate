@@ -1,6 +1,7 @@
 package com.revature.project2dante.controller;
 import com.revature.project2dante.model.User;
 import com.revature.project2dante.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,4 +27,19 @@ public class UserController {
         return userService.getAllUsers();
         }
 
+
+    //updateById
+    @PatchMapping("{userId}")
+    public User updateUser(@PathVariable Integer userId, @RequestBody User user){
+        return userService.updateUser(userId, user);
     }
+
+
+    //delete
+    @DeleteMapping("/{userId}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void deleteUserById(@PathVariable Integer userId){
+        userService.deleteUserById(userId);
+    }
+
+}

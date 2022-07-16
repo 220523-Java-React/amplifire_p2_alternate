@@ -2,7 +2,6 @@ package com.revature.project2dante.service;
 
 import com.revature.project2dante.model.User;
 import com.revature.project2dante.repository.UserRepository;
-import org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,6 +28,16 @@ public class UserService {
     //getByID
     public User getUserById(int id) {
         return userRepository.findById(id).get();
+    }
+
+    //update
+    public User updateUser(Integer userId, User user) {
+        return userRepository.save(user);
+    }
+
+   //delete
+    public void deleteUserById(int id) {
+        userRepository.deleteById(id);
     }
 }
 
