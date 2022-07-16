@@ -16,6 +16,18 @@ public class User implements Serializable {
     private String username;
 
     @Column(nullable = false)
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public User setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+    @Column(nullable = false)
     private String firstName;
 
     @Column(nullable = false)
