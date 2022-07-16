@@ -1,22 +1,23 @@
 package com.revature.project2dante.model;
 
-import javax.persistence.*;
-import java.io.Serializable;
 
-@Entity(name = "armor")
-public class Armor implements Serializable {
+import javax.persistence.*;
+
+@Entity(name = "weapons")
+public class Weapon {
     @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
 
     public Long getId() {
         return id;
     }
 
-    public Armor setId(Long id) {
+    public void setId(Long id) {
         this.id = id;
-        return this;
     }
+
     @Column(unique = true, nullable = false)
     private String name;
 
@@ -24,20 +25,20 @@ public class Armor implements Serializable {
         return name;
     }
 
-    public Armor setName(String name) {
+    public Weapon setName(String name) {
         this.name = name;
         return this;
     }
 
     @Column (nullable = false)
-    private Integer defense;
+    private Integer power;
 
-    public Integer getDefense() {
-        return defense;
+    public Integer getPower() {
+        return power;
     }
 
-    public Armor setDefense(Integer defense) {
-        this.defense = defense;
+    public Weapon setPower(Integer power) {
+        this.power = power;
         return this;
     }
 
@@ -48,7 +49,7 @@ public class Armor implements Serializable {
         return description;
     }
 
-    public Armor setDescription(String description) {
+    public Weapon setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -60,12 +61,8 @@ public class Armor implements Serializable {
         return price;
     }
 
-    public Armor setPrice(Integer price) {
+    public Weapon setPrice(Integer price) {
         this.price = price;
         return this;
-    }
-
-
-    public static class Weapon {
     }
 }

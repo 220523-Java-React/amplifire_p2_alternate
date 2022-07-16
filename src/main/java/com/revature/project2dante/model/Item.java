@@ -16,7 +16,7 @@ public class Item implements Serializable {
             return id;
         }
 
-        public com.revature.project2dante.model.Item setId(Long id) {
+        public Item setId(Long id) {
             this.id = id;
             return this;
         }
@@ -28,7 +28,7 @@ public class Item implements Serializable {
             return name;
         }
 
-        public com.revature.project2dante.model.Item setName(String name) {
+        public Item setName(String name) {
             this.name = name;
             return this;
         }
@@ -41,7 +41,7 @@ public class Item implements Serializable {
             return description;
         }
 
-        public com.revature.project2dante.model.Item setDescription(String description) {
+        public Item setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -53,7 +53,7 @@ public class Item implements Serializable {
             return price;
         }
 
-        public com.revature.project2dante.model.Item setPrice(Integer price) {
+        public Item setPrice(Integer price) {
             this.price = price;
             return this;
         }

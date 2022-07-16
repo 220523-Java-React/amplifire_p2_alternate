@@ -11,13 +11,13 @@ import java.util.List;
 public class ItemService {
 
 
-        private final com.revature.project2dante.repository.ItemRepository ItemRepository;
+        private final ItemRepository ItemRepository;
 
-        public ItemService(com.revature.project2dante.repository.ItemRepository ItemRepository) {
+        public ItemService(ItemRepository ItemRepository) {
             this.ItemRepository = ItemRepository;
         }
         //create
-        public com.revature.project2dante.model.Item createItem(com.revature.project2dante.model.Item item) {
+        public Item createItem(Item item) {
             return ItemRepository.save(item);
         }
         //Get
