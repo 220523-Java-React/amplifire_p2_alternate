@@ -26,4 +26,10 @@ public class WeaponController {
     public List<Weapon> getAllWeapons(){
         return weaponService.getAllWeapons();
     }
+
+    //getUserById
+    @GetMapping("{weaponId}")
+    public Weapon getWeaponById(@PathVariable Integer weaponId){
+        return weaponService.getWeaponById(weaponId);
+    }
 }

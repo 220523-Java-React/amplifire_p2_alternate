@@ -25,4 +25,7 @@ public class WeaponService {
         return weaponRepository.findAll();
     }
 
+    public Weapon getWeaponById(Integer weaponId) {
+        return weaponRepository.findById(weaponId).get();
+    }
 }
