@@ -27,6 +27,12 @@ public class UserController {
         return userService.getAllUsers();
         }
 
+        //findUserById
+        @GetMapping("{userId}")
+        public User getUserById(@PathVariable Integer userId){
+            return userService.getUserById(userId);
+        }
+
 
     //updateById
     @PatchMapping("{userId}")
