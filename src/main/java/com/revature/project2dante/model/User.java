@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class User implements Serializable {
 
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer userId;
@@ -19,15 +20,6 @@ public class User implements Serializable {
 
     @Column(nullable = false)
     private String password;
-
-    public String getPassword() {
-        return password;
-    }
-
-    public User setPassword(String password) {
-        this.password = password;
-        return this;
-    }
 
     @Column(nullable = false)
     private String firstName;
@@ -41,6 +33,23 @@ public class User implements Serializable {
     @Enumerated
     @Column(nullable = false)
     private Role role;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "avatar_id")
+    private Avatar avatar;
+    //*****************Getters and Setters******************************
+
+    public String getPassword() {
+        return password;
+    }
+
+    public User setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+
 
     public Role getRole() {
         return role;

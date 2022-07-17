@@ -19,5 +19,18 @@ public class Inventory implements Serializable {
         return this;
     }
 
+//    ************* Foreign Keys *****************
+@OneToOne(cascade = CascadeType.ALL)
+@JoinColumn(name = "armor_id")
+private Armor armor;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "weapon_id")
+    private Weapon weapon;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "item_id")
+    private Item item;
+
 
 }

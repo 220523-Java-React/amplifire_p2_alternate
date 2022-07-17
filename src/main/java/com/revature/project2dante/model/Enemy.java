@@ -123,5 +123,15 @@ public class Enemy {
     }
 
 
+    //**************Foreign Keys *****************************************
+@OneToOne
+@JoinColumn(name = "inventory_id")
+private Inventory inventory;
+
+
+
+
+
+
 
 }

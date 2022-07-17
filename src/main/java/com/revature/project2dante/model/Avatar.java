@@ -1,6 +1,7 @@
 package com.revature.project2dante.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "avatar")
 public class Avatar {
@@ -99,6 +100,12 @@ public class Avatar {
         this.specialDefense = specialDefense;
         return this;
     }
+
+//    ***************** Foreign Key *****************************
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "inventory_id")
+    private Inventory inventory;
 
 
 }
