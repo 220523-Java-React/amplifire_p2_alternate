@@ -6,17 +6,15 @@ import java.io.Serializable;
 @Entity(name = "item")
 public class Item implements Serializable {
 
-
-
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
-        private Long id;
+        private Integer id;
 
-        public Long getId() {
+        public Integer getId() {
             return id;
         }
 
-        public Item setId(Long id) {
+        public Item setId(Integer id) {
             this.id = id;
             return this;
         }

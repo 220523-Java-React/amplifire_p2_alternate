@@ -25,7 +25,18 @@ public class WeaponService {
         return weaponRepository.findAll();
     }
 
-    public Weapon getWeaponById(Integer weaponId) {
-        return weaponRepository.findById(weaponId).get();
+    //getById
+    public Weapon getWeaponById(Integer id) {
+        return weaponRepository.findById(id).get();
+    }
+
+    //update
+    public Weapon updateWeapon(Integer weaponId, Weapon weapon){
+        return weaponRepository.save(weapon);
+    }
+
+    //delete
+    public void deleteWeaponById(int id){
+        weaponRepository.deleteById(id);
     }
 }

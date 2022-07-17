@@ -25,4 +25,19 @@ public class EnemyService {
     public List<Enemy> getAllEnemies() {
         return enemyRepository.findAll();
     }
+
+    //getById
+    public Enemy getEnemyById(int id){
+        return enemyRepository.findById(id).get();
+    }
+
+    //update
+    public Enemy updateEnemy(Integer enemyId, Enemy enemy){
+        return enemyRepository.save(enemy);
+    }
+
+    //delete
+    public void deleteEnemyById(int id){
+        enemyRepository.deleteById(id);
+    }
 }

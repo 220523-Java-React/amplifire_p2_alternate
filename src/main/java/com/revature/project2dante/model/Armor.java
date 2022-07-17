@@ -7,13 +7,13 @@ import java.io.Serializable;
 public class Armor implements Serializable {
     @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public Armor setId(Long id) {
+    public Armor setId(Integer id) {
         this.id = id;
         return this;
     }

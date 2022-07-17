@@ -25,5 +25,18 @@ public class ItemService {
             return ItemRepository.findAll();
         }
 
+        //getById
+        public Item getItemById(int id){
+            return ItemRepository.findById(id).get();
+        }
 
+        //update
+        public Item updateItem(Integer itemId, Item item){
+            return ItemRepository.save(item);
+        }
+
+        //delete
+        public void deleteItemById(int id){
+            ItemRepository.deleteById(id);
+        }
 }

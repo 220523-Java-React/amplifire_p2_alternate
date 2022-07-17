@@ -22,4 +22,19 @@ public class ArmorService {
     public List<Armor> getAllArmors() {
         return armorRepository.findAll();
     }
+
+    //getById
+    public Armor getArmorById(Integer id){
+        return armorRepository.findById(id).get();
+    }
+
+    //update
+    public Armor updateArmor(Integer armorId, Armor armor){
+        return armorRepository.save(armor);
+    }
+
+    //delete
+    public void deleteArmorById(int id){
+        armorRepository.deleteById(id);
+    }
 }

@@ -26,4 +26,18 @@ public class InventoryService {
         return this.inventoryRepository.findAll();
     }
 
+    //getById
+    public Inventory getInventoryById(Long id){
+        return this.inventoryRepository.findById(id).get();
+    }
+
+    //update
+    public Inventory updateInventory(Long id, Inventory inventory){
+        return this.inventoryRepository.save(inventory);
+    }
+
+    //delete
+    public void deleteInventoryById(Long id){
+        inventoryRepository.deleteById(id);
+    }
 }

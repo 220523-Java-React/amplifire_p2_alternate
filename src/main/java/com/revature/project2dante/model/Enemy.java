@@ -6,13 +6,13 @@ import javax.persistence.*;
 public class Enemy {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public Enemy setId(Long id) {
+    public Enemy setId(Integer id) {
          this.id = id;
             return this;
     }

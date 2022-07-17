@@ -6,14 +6,15 @@ import javax.persistence.*;
 public class Avatar {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private Long id;
+    private Integer id;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public Avatar setId(Integer id) {
         this.id = id;
+        return this;
     }
 
     @Column(unique = true, nullable = false)
