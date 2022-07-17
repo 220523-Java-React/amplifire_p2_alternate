@@ -26,4 +26,8 @@ public class ItemService {
         }
 
 
+    public void deleteItemById(Integer itemId) {
+        ItemRepository.deleteById(itemId);
+
+    }
 }

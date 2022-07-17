@@ -3,6 +3,7 @@ package com.revature.project2dante.controller;
 
 import com.revature.project2dante.model.Item;
 import com.revature.project2dante.service.ItemService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,5 +27,25 @@ public class ItemController {
     public List<Item> getAllItems(){
         return itemService.getAllItems();
     }
+
+    //findItemById
+    @GetMapping("{itemId}")
+    public Item getItemById(@PathVariable Integer itemId){
+        return itemService.getItemById(itemId);
+    }
+
+    //updateById
+    @PatchMapping("{itemId}")
+    public Item updateItem(@PathVariable Integer itemId, @RequestBody Item item){
+        return itemService.updateItem(itemId, item);
+    }
+
+    //delete
+    @DeleteMapping("/{itemId}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void deleteItemById(@PathVariable Integer itemId){
+        itemService.deleteItemById(itemId);
+    }
+
 
 }

@@ -28,4 +28,12 @@ public class WeaponService {
     public Weapon getWeaponById(Integer weaponId) {
         return weaponRepository.findById(weaponId).get();
     }
+
+    public Weapon updateWeapon(Integer weaponId, Weapon weapon) {
+        return weaponRepository.save(weapon);
+    }
+
+    public void deleteWeaponById(Integer weaponId) {
+        weaponRepository.deleteById(weaponId);
+    }
 }

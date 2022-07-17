@@ -24,4 +24,18 @@ public class ArmorController {
     public List<Armor> getAllArmors() {
         return armorService.getAllArmors();
     }
+
+    //getById
+    @GetMapping("{armorId}")
+    public Armor getArmorById(@PathVariable Integer armorId) {
+        return armorService.getArmorById(armorId);
+    }
+
+    //updateById
+    @PatchMapping("{armorId}")
+    public Armor updateArmor(@PathVariable Integer armorId, @RequestBody Armor armor) {
+        return armorService.updateArmor(armorId, armor);
+    }
+
+
 }

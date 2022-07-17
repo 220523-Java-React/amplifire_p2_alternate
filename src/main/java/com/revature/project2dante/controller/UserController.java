@@ -34,6 +34,8 @@ public class UserController {
         }
 
 
+
+
     //updateById
     @PatchMapping("{userId}")
     public User updateUser(@PathVariable Integer userId, @RequestBody User user){
@@ -47,5 +49,7 @@ public class UserController {
     public void deleteUserById(@PathVariable Integer userId){
         userService.deleteUserById(userId);
     }
+
+
 
 }

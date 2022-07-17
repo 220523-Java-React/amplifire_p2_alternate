@@ -27,4 +27,17 @@ public class EnemyController {
     public List<Enemy> getAllEnemies() {
         return enemyService.getAllEnemies();
     }
+
+    //getUserById
+    @GetMapping("{enemyId}")
+    public Enemy getEnemyById(@PathVariable Integer enemyId) {
+        return enemyService.getEnemyById(enemyId);
+    }
+
+    //updateById
+    @PatchMapping("{enemyId}")
+    public Enemy updateEnemy(@PathVariable Integer enemyId, @RequestBody Enemy enemy) {
+        return enemyService.updateEnemy(enemyId, enemy);
+    }
+
 }

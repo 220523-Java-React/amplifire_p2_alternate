@@ -26,4 +26,6 @@ public class InventoryController {
     public List<Inventory> getAllInventories(){
         return inventoryService.getAllInventories();
     }
+
+
 }

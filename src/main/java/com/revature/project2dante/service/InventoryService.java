@@ -26,4 +26,6 @@ public class InventoryService {
         return this.inventoryRepository.findAll();
     }
 
+
+
 }

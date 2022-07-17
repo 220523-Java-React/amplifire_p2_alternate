@@ -22,4 +22,12 @@ public class ArmorService {
     public List<Armor> getAllArmors() {
         return armorRepository.findAll();
     }
+
+    public Armor getArmorById(Integer armorId) {
+        return armorRepository.findById(armorId).get();
+    }
+
+    public Armor updateArmor(Integer armorId, Armor armor) {
+        return armorRepository.save(armor);
+    }
 }

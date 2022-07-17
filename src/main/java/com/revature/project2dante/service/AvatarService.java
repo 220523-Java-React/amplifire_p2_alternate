@@ -25,4 +25,11 @@ public class AvatarService {
         return avatarRepository.findAll();
     }
 
+    public Avatar getAvatarById(Integer avatarId) {
+        return avatarRepository.findById(avatarId).get();
+    }
+
+    public Avatar updateAvatar(Integer avatarId, Avatar avatar) {
+        return avatarRepository.save(avatar);
+    }
 }
