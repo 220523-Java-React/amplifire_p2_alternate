@@ -30,4 +30,12 @@ public class ItemService {
         ItemRepository.deleteById(itemId);
 
     }
+
+    public Item updateItem(Integer itemId, Item item) {
+        return ItemRepository.save(item);
+    }
+
+    public Item getItemById(Integer itemId) {
+        return ItemRepository.findById(itemId).get();
+    }
 }
