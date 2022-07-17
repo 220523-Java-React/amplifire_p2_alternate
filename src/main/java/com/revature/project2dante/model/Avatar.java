@@ -101,5 +101,15 @@ public class Avatar {
         return this;
     }
 
+    @OneToOne
+    private Inventory inventoryId;
 
+    public Inventory getInventoryId() {
+        return inventoryId;
+    }
+
+    public Avatar setInventoryId(Inventory inventoryId) {
+        this.inventoryId = inventoryId;
+        return this;
+    }
 }

@@ -44,5 +44,4 @@ public class InventoryController {
     public void deleteInventoryById(@PathVariable Long inventoryId){
         inventoryService.deleteInventoryById(inventoryId);
     }
-
 }

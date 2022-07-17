@@ -39,4 +39,8 @@ public class ItemService {
         public void deleteItemById(int id){
             ItemRepository.deleteById(id);
         }
+
+        public List<Item> getAllItemsByOwned(){
+            return ItemRepository.findAllByOwnedTrue();
+        }
 }

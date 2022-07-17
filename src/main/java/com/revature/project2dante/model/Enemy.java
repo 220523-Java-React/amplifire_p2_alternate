@@ -122,6 +122,15 @@ public class Enemy {
         return this;
     }
 
+    @OneToOne
+    private Item itemId;
 
+    public Item getItemId() {
+        return itemId;
+    }
 
+    public Enemy setItemId(Item itemId) {
+        this.itemId = itemId;
+        return this;
+    }
 }

@@ -55,6 +55,15 @@ public class Item implements Serializable {
             this.price = price;
             return this;
         }
+        @Column(nullable =false)
+        private boolean owned;
 
-
+    public boolean isOwned() {
+        return owned;
     }
+
+    public Item setOwned(boolean owned) {
+        this.owned = owned;
+        return this;
+    }
+}

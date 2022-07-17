@@ -43,4 +43,11 @@ public class ItemController {
     public void deleteItemById(@PathVariable Integer itemId){
         itemService.deleteItemById(itemId);
     }
+
+    @GetMapping("owned")
+    public List<Item> getAllItemsByOwned(){
+
+            return itemService.getAllItemsByOwned();
+
+    }
 }

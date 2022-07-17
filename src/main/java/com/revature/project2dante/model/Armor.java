@@ -66,6 +66,5 @@ public class Armor implements Serializable {
     }
 
 
-    public static class Weapon {
-    }
+
 }

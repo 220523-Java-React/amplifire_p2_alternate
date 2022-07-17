@@ -3,6 +3,7 @@ package com.revature.project2dante.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity(name = "inventory")
 public class Inventory implements Serializable {
@@ -19,5 +20,16 @@ public class Inventory implements Serializable {
         return this;
     }
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "inventory_id")
+    private List<Armor> armors;
 
+    public List<Armor> getArmors() {
+        return armors;
+    }
+
+    public Inventory setArmors(List<Armor> armors) {
+        this.armors = armors;
+        return this;
+    }
 }
